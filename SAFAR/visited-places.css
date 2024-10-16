@@ -1,0 +1,119 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styles */
+.places-container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Custom place input styles */
+.custom-place {
+    margin-bottom: 20px; /* Spacing below the input */
+}
+
+/* Input field styles */
+#customPlace {
+    width: calc(100% - 80px); /* Adjust width for the button */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: white;
+}
+
+/* Places List styles */
+.places-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for multiple columns */
+    justify-content: center; /* Center items */
+}
+
+/* Individual place option styles */
+.place-option {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transitions */
+    width: 45%; /* Width for two items in a row */
+}
+
+/* Hover effect for place options */
+.place-option:hover {
+    transform: scale(1.05); /* Slightly enlarge */
+    background: rgba(255, 0, 0, 0.3); /* Light red with slight transparency */
+}
+
+/* Added places styles */
+.added-places {
+    margin: 20px 0; /* Space around the added places */
+}
+
+/* Individual added place item styles */
+.place-item {
+    display: flex; /* Horizontal alignment */
+    justify-content: space-between; /* Space between text and remove button */
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    transition: transform 0.3s ease; /* Transition for 3D effect */
+}
+
+.place-item:hover {
+    transform: scale(1.02); /* 3D effect on hover */
+}
+
+/* Remove button styles */
+.remove {
+    color: red; /* Red color for remove icon */
+    cursor: pointer; /* Pointer cursor */
+    margin-left: 10px; /* Space from text */
+}
+
+/* Submit button styles */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #ae0049; /* Button color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition */
+    margin-top: 20px; /* Space above button */
+}
+
+.submit-btn:hover {
+    background-color: #ff5e8d; /* Lighter shade on hover */
+}

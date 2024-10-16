@@ -1,0 +1,269 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ae0049 0.2%, #000060 10%, #01000c 90%);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Sidebar Navigation styles */
+.sidebar {
+    width: 60px;
+    background: #f0f0f0; /* Off-white color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -80px; /* Completely off-screen */
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    border: 1px solid black; /* Black border for outline */
+}
+
+.icon-menu {
+    margin-top: 20px;
+}
+
+.icon {
+    margin: 15px 0;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    z-index: 1100;
+}
+
+/* Main Content styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    position: relative;
+    margin-left: 20px; /* Adjust to align content properly */
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    font-family: 'Samarkan', sans-serif;
+    font-size: 28px;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.mainsearch-bar {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-left: auto;
+}
+
+/* Post styles */
+.post {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.post-pfp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.post-details {
+    flex-grow: 1;
+}
+
+.post-name {
+    margin: 0;
+}
+
+.post-caption {
+    margin: 5px 0;
+}
+
+.post-rating span {
+    font-size: 20px;
+    color: yellow;
+}
+
+.comment-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.see-more {
+    background: transparent;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns the button to the left */
+}
+
+.see-more:hover {
+    color: darkblue;
+}
+
+.additional-comments {
+    display: none;
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    resize: none;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+textarea:focus {
+    border-bottom: 1px solid blue;
+    outline: none;
+}
+
+/* Small Post Button Styles */
+.post-button {
+    align-self: flex-start; /* Aligns the button to the left */
+    margin-top: 5px; /* Space between textarea and button */
+    padding: 5px 10px; /* Small padding for the button */
+    font-size: 12px; /* Smaller font size for the button */
+    background: blue; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.post-button:hover {
+    background: darkblue; /* Change color on hover */
+}
+
+/* Chat Sidebar styles */
+.sidebar-places {
+    display: none; 
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.977);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1001;
+    transition: display 0.3s ease; /* Optional transition */
+}
+
+.sidebar-places.active {
+    display: block; 
+}
+
+
+/* Chatroom Header styles */
+.chatroom-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space below header */
+}
+
+.chat-icon {
+    width: 24px; /* Adjust size of the chat icon */
+    height: 24px; /* Adjust size of the chat icon */
+    margin-right: 10px; /* Space between icon and title */
+}
+
+.chatroom-title {
+    font-size: 24px; /* Title size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Search Bar styles */
+.sidebar-places .search-bar {
+    width: 100%; /* Full width for search bar */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px; /* Space from the places list */
+    background: rgba(11, 0, 0, 0.9); /* Dark background */
+    color: white; /* Text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Places List styles */
+.places-list {
+    margin-top: 20px; /* Space from the search bar */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Top border */
+}
+
+/* Individual Place Item styles */
+.places-list div {
+    margin: 10px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
+.places-list div:hover {
+    background: rgba(255, 0, 0, 0.2); 
+    color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+

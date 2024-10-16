@@ -1,0 +1,164 @@
+/* Main Body Styling */
+body {
+    background: linear-gradient(135deg, #3C4A4D 0.2%, #1C2833 40%, #17202A 90%);
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.ui-w-80 {
+    width : 80px !important;
+    height: auto;
+}
+.font-weight-bold.py-3.mb-4 {
+    color: white;
+}
+
+/* Button Default Styling */
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background  : rgba(0, 0, 0, 0);
+    color       : #4E5155;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Outline Button */
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background  : transparent;
+    color       : #26B4FF;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* 3D Button Hover Effect */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Click Effect */
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+/* Social Media Buttons */
+.btn-facebook {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #3B5998;
+    color       : #fff;
+}
+
+.btn-instagram {
+    border-color: rgba(0, 0, 0, 0);
+    background  : #000;
+    color       : #fff;
+}
+
+/* Card Styling */
+.card {
+    background-clip: padding-box;
+    box-shadow     : 0 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius  : 10px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Row Border Overflow Fix */
+.row-bordered {
+    overflow: hidden;
+}
+
+/* File Input (Hidden) */
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+
+/* Active List Group Item */
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+    background-color: #0095f6 !important;
+    color: white !important;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Multiselect Styling */
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+/* Light Style List Group Item */
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Light Style Active List Item */
+.light-style .account-settings-links .list-group-item.active {
+    color: #4E5155 !important;
+}
+
+/* Material Style List Group */
+.material-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+/* Material Style Active List Item */
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+    background-color: rgba(0, 149, 246, 0.1);
+}
+
+/* Dark Style List Group Item */
+.dark-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+    transition: all 0.3s ease;
+}
+
+/* Dark Style Active List Item */
+.dark-style .account-settings-links .list-group-item.active {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effect for List Items */
+.light-style .account-settings-links .list-group-item:hover, 
+.dark-style .account-settings-links .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Smooth transitions for background color and size */
+.account-settings-links .list-group-item {
+    transition: all 0.2s ease-in-out;
+}
+

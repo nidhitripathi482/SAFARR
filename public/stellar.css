@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #2e3c4a; 
+	--dark-color-b: #3f4d5c;
+	--light-color: #f0f1f5; 
+	--border-color: #c5c7ca; 
+	--success-color: #2e3c4a; 
+	--error-color: #d9534f; 
+	--font-color-dark: #333333; 
+	--font-color-light: #ffffff; 
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	color: var(--font-color-dark); 
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 10px 20px;
+	background: var(--dark-color-b); 
+	color: var(--font-color-light); 
+	border: 1px solid var(--border-color); 
+	border-radius: 5px;
+	font-size: 17px;
+	transition: background 0.3s ease;
+}
+
+.btn:hover {
+	background: var(--dark-color-a); 
+}
+
+
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	background-color: var(--font-color-light); 
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	border: 1px solid var(--border-color); 
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	color: var(--font-color-light);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.join-header h1 {
+	font-size: 28px;
+	margin: 0;
+}
+
+.join-main {
+	padding: 40px 30px;
+	background: var(--light-color);
+}
+
+.form-control {
+	margin-bottom: 20px;
+}
+
+.form-control label {
+	display: block;
+	margin-bottom: 10px;
+	color: var(--dark-color-b);
+	font-size: 16px;
+}
+
+.form-control input,
+.form-control select {
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	height: 40px;
+	border: 1px solid var(--border-color); 
+	border-radius: 5px;
+	background-color: var(--font-color-light);
+	color: var(--dark-color-a); 
+}
+
+.form-control input:focus,
+.form-control select:focus {
+	outline: none;
+	border-color: var(--success-color); 
+}
+
+button[type='submit'] {
+	width: 100%;
+	background: var(--dark-color-a); 
+	border: none;
+	padding: 12px;
+	border-radius: 5px;
+	font-size: 18px;
+	color: var(--font-color-light);
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+button[type='submit']:hover {
+	background: var(--dark-color-b);
+}
+
+@media (max-width: 700px) {
+	.join-container {
+		margin: 40px auto;
+	}
+
+	.join-main {
+		padding: 30px 20px;
+	}
+}

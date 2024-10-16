@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Places</title>
+    <link rel="stylesheet" href="visited-places.css">
+</head>
+<body>
+    <div class="places-container">
+        <h1>Select Places You Have Visited</h1>
+        
+        <div class="custom-place">
+            <input type="text" id="customPlace" placeholder="Type a place..." />
+            <button onclick="addPlace()">OK</button>
+        </div>
+
+        <div class="added-places" id="added-places"></div>
+
+        <div class="places-list">
+            <label class="place-option"><input type="checkbox" value="Matheran"> Matheran</label>
+            <label class="place-option"><input type="checkbox" value="Mahabaleshwar"> Mahabaleshwar</label>
+            <label class="place-option"><input type="checkbox" value="Goa"> Goa</label>
+            <label class="place-option"><input type="checkbox" value="Manali"> Manali</label>
+            <label class="place-option"><input type="checkbox" value="Shimla"> Shimla</label>
+            <label class="place-option"><input type="checkbox" value="Pondicherry"> Pondicherry</label>
+            <label class="place-option"><input type="checkbox" value="Ladakh"> Ladakh</label>
+            <label class="place-option"><input type="checkbox" value="Rishikesh"> Rishikesh</label>
+        </div>
+
+        <button class="submit-btn" onclick="submitPlaces()">Submit</button>
+    </div>
+
+    <script>
+        function addPlace() {
+            const placeInput = document.getElementById('customPlace');
+            const placeValue = placeInput.value.trim();
+            if (placeValue) {
+                const addedPlacesDiv = document.getElementById('added-places');
+
+                const placeDiv = document.createElement('div');
+                placeDiv.classList.add('place-item');
+                placeDiv.innerHTML = `${placeValue} <span class="remove" onclick="removePlace(this)">✖</span>`;
+                
+                addedPlacesDiv.appendChild(placeDiv);
+                placeInput.value = ''; 
+            }
+        }
+
+        function removePlace(element) {
+            element.parentElement.remove();
+        }
+
+        function submitPlaces() {
+            const addedPlaces = Array.from(document.querySelectorAll('.place-item')).map(item => item.textContent.trim().slice(0, -1));
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+            const selectedPlaces = [...addedPlaces, ...Array.from(checkboxes).map(checkbox => checkbox.value)];
+
+            localStorage.setItem('visitedPlaces', JSON.stringify(selectedPlaces));
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>
+

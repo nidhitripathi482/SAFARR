@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"> <!-- Create a CSS file for styling -->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+    
+    <script>
+        function login() {
+            // Validate login (this is just a simple example, add real validation)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                // Redirect to visited places selection
+                window.location.href = 'visited-places.html'; // Create this page next
+            } else {
+                alert('Please enter valid credentials.');
+            }
+        }
+    </script>
+</body>
+</html>

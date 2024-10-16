@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="settingspage.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul>
+        <li><a href="#" onclick="loadContent('Edit Profile')">Edit Profile</a></li>
+        <li><a href="#" onclick="loadContent('Notifications')">Notifications</a></li>
+        <li><a href="#" onclick="loadContent('Account Privacy')">Account Privacy</a></li>
+        <li><a href="#" onclick="loadContent('Help')">Help</a></li>
+        <li><a href="#" onclick="loadContent('About')">About</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li> <!-- Logout Link -->
+      </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <h1 id="content-title">Edit Profile</h1>
+      <div id="content-text">
+        <h2>Change Your Profile Information</h2>
+        <form>
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username"><br><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password"><br><br>
+          <input type="submit" value="Save Changes">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="settingspage.js"></script>
+</body>
+</html>

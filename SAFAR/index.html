@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safar</title>
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="icon-menu">
+                <div class="icon"><img src="search-interface-symbol.png" alt="Search"></div>
+                <div class="icon"> <a href="post.html"><img src="plus.png" alt="Post"></a></div>
+                <div class="icon"><img src="send.png" alt="DM"></div>
+                <div class="icon">
+                    <a href="profile.html"><img src="user.png" alt="Profile"></a>
+                </div>
+                <div class="icon">
+                    <a href="index.html"><img src="home.png" alt="Home"></a>
+                </div>
+                <div class="icon" onclick="togglePlacesSidebar()">
+                    <img src="follow-us.png" alt="Places">
+                </div>
+                <div class="icon">
+                    <a href="settingspage.html"><img src="settings.png" alt="Settings"></a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <header>
+                <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
+                <h1 class="site-title">Safar</h1>
+                <input type="text" class="mainsearch-bar" placeholder="Search...">
+            </header>
+
+            <!-- Post Sections -->
+            <div class="post">
+                <div class="post-image">
+                    <img src="kashmir.jpg" alt="Kashmir">
+                </div>
+                <div class="post-info">
+                    <div class="post-pfp"><img src="pfp.jpg" alt="User Profile"></div>
+                    <div class="post-details">
+                        <h2 class="post-name">User Name</h2>
+                        <p class="post-caption">Had a great experience at Kashmir</p>
+                        <div class="post-rating">
+                            <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p><strong>User1:</strong> This is a great post!</p>
+                    </div>
+                    <button class="see-more" onclick="toggleComments(this)">See more</button>
+                    <div class="additional-comments" style="display: none;">
+                        <div class="comment">
+                            <p><strong>User2:</strong> I agree with you!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>User3:</strong> Very informative!</p>
+                        </div>
+                    </div>
+                    <textarea placeholder="Add a comment..." rows="2"></textarea>
+                    <button class="post-comment">Post</button>
+                </div>
+            </div>
+
+            <!-- Duplicate Posts -->
+            <div class="post">
+                <div class="post-image">
+                    <img src="goa.jpg" alt="Goa">
+                </div>
+                <div class="post-info">
+                    <div class="post-pfp"><img src="pfp.jpg" alt="User Profile"></div>
+                    <div class="post-details">
+                        <h2 class="post-name">User Name 2</h2>
+                        <p class="post-caption">Papa maan gaye for goa trip!</p>
+                        <div class="post-rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p><strong>User1:</strong> Beautiful view!</p>
+                    </div>
+                    <button class="see-more" onclick="toggleComments(this)">See more</button>
+                    <div class="additional-comments" style="display: none;">
+                        <div class="comment">
+                            <p><strong>User2:</strong> Love it!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>User3:</strong> Can't wait to visit!</p>
+                        </div>
+                    </div>
+                    <textarea placeholder="Add a comment..." rows="2"></textarea>
+                    <button class="post-comment">Post</button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-image">
+                    <img src="ladakh.jpg" alt="Ladakh">
+                </div>
+                <div class="post-info">
+                    <div class="post-pfp"><img src="pfp.jpg" alt="User Profile"></div>
+                    <div class="post-details">
+                        <h2 class="post-name">User Name 3</h2>
+                        <p class="post-caption">Road trip with homies.</p>
+                        <div class="post-rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <div class="comment">
+                        <p><strong>User1:</strong> So true!</p>
+                    </div>
+                    <button class="see-more" onclick="toggleComments(this)">See more</button>
+                    <div class="additional-comments" style="display: none;">
+                        <div class="comment">
+                            <p><strong>User2:</strong> Love the mountains!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>User3:</strong> Can't get enough of this place!</p>
+                        </div>
+                    </div>
+                    <textarea placeholder="Add a comment..." rows="2"></textarea>
+                    <button class="post-comment">Post</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="sidebar-places" id="sidebar-places">
+        <header class="chatroom-header">
+            <img src="chatroomicon.png" alt="Chat Icon" class="chat-icon">
+            <h2 class="chatroom-title">CHATROOM</h2>
+        </header>
+        <input type="text" class="search-bar" placeholder="SEARCH TO ENTER CHATROOMS">
+        <div class="places-list" id="places-list">
+           
+        </div>
+    </div>        
+</div>
+
+    
+    <style>
+       
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ae0049 0.2%, #000060 10%, #01000c 90%);
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+       
+        .container {
+            display: flex;
+            height: 100vh;
+            position: relative;
+        }
+
+        
+        .sidebar {
+            width: 60px;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: -80px; 
+            height: 100%;
+            transition: left 0.3s ease;
+            z-index: 1000;
+            border: 1px solid black; 
+        }
+
+        .icon-menu {
+            margin-top: 20px;
+        }
+
+        .icon {
+            margin: 15px 0;
+        }
+
+        .icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            z-index: 1100;
+        }
+
+       
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            position: relative;
+            margin-left: 20px; 
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title {
+            font-family: 'Samarkan', sans-serif;
+            font-size: 28px;
+            margin: 0;
+            margin-left: 50px;
+        }
+
+        .mainsearch-bar {
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-left: auto;
+        }
+
+        
+        .post {
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(10px); 
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.18); 
+        }
+
+        .post-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post-info {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .post-pfp img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .post-details {
+            flex-grow: 1;
+        }
+
+        .post-name {
+            margin: 0;
+        }
+
+        .post-caption {
+            margin: 5px 0;
+        }
+
+        .post-rating span {
+            font-size: 20px;
+            color: yellow;
+        }
+
+        
+        .sidebar-places {
+            display: none; 
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.977);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            z-index: 1001;
+        }
+
+        .sidebar-places.active {
+            display: block; 
+        }
+
+        .sidebar-places .search-bar {
+            width: 100%; 
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px; 
+            background: rgba(11, 0, 0, 0.9); 
+            color: white; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+       
+        .places-list {
+            margin-top: 20px;
+        }
+
+        .places-list div {
+            margin: 10px 0; 
+            padding: 10px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background 0.3s ease;
+        }
+
+       
+        .places-list div:hover {
+            background: rgba(255, 0, 0, 0.2); 
+            color: white; 
+        }
+    </style>
+    <script src="../script.js"></script>
+</body>
+</html>

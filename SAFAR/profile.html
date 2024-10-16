@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-like User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   
+
+        
+        <div class="profile-section">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img src="149071.png" alt="Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <h2 id="username">Sanika_Shinde85</h2>
+                    <button class="edit-profile" onclick="location.href='settingss.html'">Edit Profile</button>
+                    <div class="profile-stats">
+                        <span id="post-count">1 posts</span>
+                        <span id="follower-count">50 followers</span>
+                        <span id="following-count">30 following</span>
+                    </div>
+                    <p class="bio">username<br>traveller</p>
+                </div>
+            </div>
+
+            
+            <div class="profile-highlights">
+                <div class="highlight-item">
+                    <img src="wave.jpg" alt="Highlight 1">
+                    <p>Highlight 1</p>
+                </div>
+              
+            </div>
+
+            
+            <div class="profile-tabs">
+                <div class="tab active" onclick="openTab('posts')">Posts</div>
+                <div class="tab" onclick="openTab('saved')">Saved</div>
+                <div class="tab" onclick="openTab('tagged')">Tagged</div>
+            </div>
+
+           
+            <div class="tab-content" id="posts">
+                <div class="profile-posts">
+                    <div class="post-item">
+                        <img src="Devgad-Beach-1.jpg" alt="Post 1">
+                    </div>
+                    <div class="post-item">
+                        <img src="post2.jfif" alt="Post 2">
+                    </div>
+                    <div class="post-item">
+                        <img src="Forrest.jfif" alt="Post 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="saved" style="display: none;">
+                <p>No saved posts yet.</p>
+            </div>
+
+            <div class="tab-content" id="tagged" style="display: none;">
+                <p>No tagged posts yet.</p>
+            </div>
+        </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

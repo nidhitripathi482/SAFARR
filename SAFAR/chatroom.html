@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="chatroom.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Profile and Icons -->
+            <div class="sidebar-header">
+                <img src="https://via.placeholder.com/40" alt="User Profile">
+                <div class="icons">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/ellipsis.png" alt="Menu Icon">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/search.png" alt="Search Icon">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/settings.png" alt="Settings Icon">
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/search.png" alt="Search">
+                <input type="text" placeholder="Search or start new chat...">
+            </div>
+
+            <!-- Chat List -->
+            <div class="chat-list">
+                <div class="chat-list-header">Chatrooms</div>
+                <div class="chat-list-item active" onclick="loadMessages('Matheran')">
+                    <img src="https://via.placeholder.com/40" alt="Matheran">
+                    <div class="chat-details">
+                        <span>Matheran</span>
+                        <p>Raghav: Shops near hiltop?</p>
+                    </div>
+                </div>
+
+                <div class="chat-list-item" onclick="loadMessages('Mahabaleshwar')">
+                    <img src="https://via.placeholder.com/40" alt="Mahabaleshwar">
+                    <div class="chat-details">
+                        <span>Mahabaleshwar</span>
+                        <p>Ananya: Restaurants near the lake?</p>
+                    </div>
+                </div>
+
+                <div class="chat-list-item" onclick="loadMessages('Shirdi')">
+                    <img src="https://via.placeholder.com/40" alt="Shirdi">
+                    <div class="chat-details">
+                        <span>Shirdi</span>
+                        <p>Nidhi: Vegetarian places?</p>
+                    </div>
+                </div>
+
+                <div class="chat-list-item" onclick="loadMessages('Nainital')">
+                    <img src="https://via.placeholder.com/40" alt="Nainital">
+                    <div class="chat-details">
+                        <span>Nainital</span>
+                        <p>Bhoomi: Budget restaurants near the mall?</p>
+                    </div>
+                </div>
+
+                <div class="chat-list-item" onclick="loadMessages('Agra')">
+                    <img src="https://via.placeholder.com/40" alt="Agra">
+                    <div class="chat-details">
+                        <span>Agra</span>
+                        <p>Ananya: Best place for Petha?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <h2 id="chat-title">Matheran</h2>
+                <div class="icons">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/attach.png" alt="Attach">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/ellipsis.png" alt="More Options">
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <div class="emoji-btn">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/happy.png" alt="Emoji">
+                </div>
+                <input type="text" id="chatInput" placeholder="Type a message">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatroom.js"> </script>
+</body>
+</html>

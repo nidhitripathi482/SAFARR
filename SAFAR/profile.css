@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2C3E50 0.2%, #1C2833 40%, #17202A 90%); /* Gradient background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+
+
+.profile-section {
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.edit-profile {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.edit-profile:hover {
+    background-color: #000; /* Change background to black */
+    color: #fff; /* Change text color to white */
+}
+;
+
+
+.profile-stats {
+    margin: 10px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.profile-stats span {
+    font-weight: bold;
+    color: white; 
+}
+
+.bio {
+    margin-top: 10px;
+    color: white; 
+}
+
+.profile-highlights {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.highlight-item {
+    text-align: center;
+}
+
+.highlight-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.profile-tabs {
+    display: flex;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #ccc; 
+    border-bottom: 2px solid transparent;
+}
+
+.tab-active {
+    border-bottom: 2px solid #fff; 
+    color: #fff; 
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.profile-posts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.post-item {
+    width: 30%;
+}
+
+.post-item img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
